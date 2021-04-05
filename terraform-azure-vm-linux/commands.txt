@@ -1,0 +1,14 @@
+https://docs.microsoft.com/fr-fr/azure/developer/terraform/get-started-cloud-shell
+
+1.  az login --tenant TENANT_ID
+
+2.  # Create a service principal to use for automated deployment in scripts
+    az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>
+
+3.  # Login using created sp
+    az login --service-principal -u <service_principal_name> -p "<service_principal_password>" --tenant "<service_principal_tenant>"
+
+    az login --service-principal -u http://azure-cli-2021-04-05-16-09-09 -p "btfGHvT_00o-ktASrL8hdFYa5cKsfoV.R7" --tenant "d5c8599f-4be6-479b-a8a8-f8d4cd6d2859"
+
+4.  terraform init
+5.  terraform plan -out <terraform_plan>.tfplan
