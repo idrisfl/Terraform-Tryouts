@@ -3,6 +3,7 @@ https://docs.microsoft.com/en-us/azure/developer/terraform/create-vm-scaleset-ne
 terraform init
 
 (multiple times)
+
 terraform plan -out azure-vmss.plan
 terraform apply "azure-vmss.plan"
 
