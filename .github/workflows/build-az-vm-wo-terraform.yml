@@ -42,5 +42,5 @@ jobs:
         uses: Azure/cli@1.0.4
         with:
           # Specify the script here
-          inlineScript: az vm create -n MyVm -g ${{ env.RESOURCE_GROUP }} --image UbuntuLTS
+          inlineScript: az vm create -n MyVm -g ${{ env.RESOURCE_GROUP }} --image UbuntuLTS --generate-ssh-keys
           
