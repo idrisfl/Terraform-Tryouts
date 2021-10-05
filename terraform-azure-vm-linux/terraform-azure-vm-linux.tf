@@ -15,19 +15,13 @@ provider "azurerm" {
 }
 
 # Create a resource group if it doesn't exist
-# Create a resource group if it doesn't exist
-# resource "azurerm_resource_group" "myterraformgroup" {
-#    name     = "myResourceGroup"
-#    location = "francecentral"
-#
-#    tags = {
-#        environment = "Terraform Demo"
-#    }
-#}
+resource "azurerm_resource_group" "myterraformgroup" {
+    name     = "myResourceGroup"
+    location = "francecentral"
 
-# Through Terraform it needs to be managed in tfplan, hence making it as data 
-data "azurerm_resource_group" "myterraformgroup" {
-  name = "github-actions"
+    tags = {
+        environment = "Terraform Demo"
+    }
 }
 
 # Create virtual network
